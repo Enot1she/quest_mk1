@@ -2,20 +2,32 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.quest_mk1">
 
+    <!--    <application-->
+    <!--        android:allowBackup="true"-->
+    <!--        android:icon="@mipmap/ic_launcher"-->
+    <!--        android:label="Квест для пожилых людей"-->
+    <!--        android:roundIcon="@mipmap/ic_launcher_round"-->
+    <!--        android:supportsRtl="true"-->
+    <!--        android:theme="@style/Theme.Quest_mk2">-->
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
-        android:label="Квест для пожилых людей"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:largeHeap="true"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Quest_mk1.NoActionBar">
-        <activity android:name=".product_buy.product_Result"></activity>
-        <activity android:name=".product_buy.product_question_bad" />
+        android:theme="@style/Theme.Quest_mk2">
+        <activity android:name=".bank.bank_Result"></activity>
+        <activity android:name=".bank.bank_bad" />
+        <activity android:name=".bank.bank_good" />
+        <activity android:name=".bank.bank_question1" />
+        <activity android:name=".product_buy.product_Result" />
         <activity android:name=".product_buy.product_question_good" />
+        <activity android:name=".product_buy.product_question_bad" />
         <activity android:name=".product_buy.product_question1" />
-        <activity android:name=".QuestMenu" />
-        <activity android:name=".Settings" />
         <activity android:name=".Theory" />
+        <activity android:name=".Settings" />
+        <activity android:name=".QuestMenu" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

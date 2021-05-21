@@ -1,5 +1,4 @@
 package com.example.quest_mk1;
-
 public class Array {
 
     boolean[] result = new boolean[2];

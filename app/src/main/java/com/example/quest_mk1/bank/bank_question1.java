@@ -1,4 +1,6 @@
-package com.example.quest_mk1.product_buy;
+package com.example.quest_mk1.bank;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,19 +11,16 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-
 import com.example.quest_mk1.Array;
 import com.example.quest_mk1.R;
 import com.example.quest_mk1.Settings;
 
-
-public class product_question1 extends AppCompatActivity {
+public class bank_question1 extends AppCompatActivity {
     private RadioButton bt_g;
     private RadioButton bt_b;
     private TextView tv;
     private Button next;
+    private TextView tv2;
     private boolean isImageScaled = false;
     ImageView imageView_n_ok;
     ImageView imageView_ok;
@@ -31,10 +30,11 @@ public class product_question1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_product_question1);
+        setContentView(R.layout.activity_bank_question1);
         bt_g = (RadioButton) findViewById(R.id.bt_g);
         bt_b = (RadioButton) findViewById(R.id.bt_b);
         tv = (TextView) findViewById(R.id.textView);
+        tv2 = (TextView) findViewById(R.id.textView1);
         next = (Button) findViewById(R.id.next);
         ImageView ok = (ImageView) findViewById(R.id.imageView_ok);
         ImageView n_ok = (ImageView) findViewById(R.id.imageView_n_ok);
@@ -54,21 +54,19 @@ public class product_question1 extends AppCompatActivity {
             public void onClick(View v) {
                 if (bt_g.isChecked()){
                     array.getAns(true, 0);
-                    Intent intentProduct_question_good = new Intent(product_question1.this, product_question_good.class);
+                    Intent intentProduct_question_good = new Intent(bank_question1.this, bank_good.class);
                     startActivity(intentProduct_question_good);
                 }
                 else if (bt_b.isChecked()) {
                     array.getAns(false, 0);
-                    Intent intentProduct_question_bad = new Intent(product_question1.this, product_question_bad.class);
+                    Intent intentProduct_question_bad = new Intent(bank_question1.this, bank_bad.class);
                     startActivity(intentProduct_question_bad);
                 }
                 else {
-                    Toast.makeText(product_question1.this, "Выберите вариант", Toast.LENGTH_LONG).show();
+                    Toast.makeText(bank_question1.this, "Выберите вариант", Toast.LENGTH_LONG).show();
                 }
             }
         });
-
-
     }
 
     @Override
@@ -78,5 +76,6 @@ public class product_question1 extends AppCompatActivity {
         bt_g.setTextSize(Settings.SETTING_SIZE);
         tv.setTextSize(Settings.SETTING_SIZE);
         next.setTextSize(Settings.SETTING_SIZE);
+        tv2.setTextSize(Settings.SETTING_SIZE);
     }
 }

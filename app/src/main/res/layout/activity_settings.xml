@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Settings"
-    android:background="#00C2CB">
+    >
 
     <com.google.android.material.slider.Slider
         android:id="@+id/slider"

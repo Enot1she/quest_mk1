@@ -26,7 +26,7 @@ public class product_question_bad extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_product_question_good);
+        setContentView(R.layout.activity_product_question_bad);
         bt_g = (RadioButton) findViewById(R.id.bt_g);
         bt_b = (RadioButton) findViewById(R.id.bt_b);
         tv = (TextView) findViewById(R.id.textView);

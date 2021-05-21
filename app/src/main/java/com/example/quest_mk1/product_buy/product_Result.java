@@ -7,11 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.quest_mk1.MainActivity;
 import com.example.quest_mk1.R;
 import com.example.quest_mk1.Settings;
+import com.example.quest_mk1.Theory;
 
 import static com.example.quest_mk1.product_buy.product_question1.array;
 
@@ -20,7 +20,7 @@ public class product_Result extends AppCompatActivity {
     TextView tv;
     Button next_r;
     boolean[] result = new boolean[2];
-
+    Button theory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,7 @@ public class product_Result extends AppCompatActivity {
         setContentView(R.layout.activity_product__result);
         tv = (TextView) findViewById(R.id.textView);
         next_r = (Button) findViewById(R.id.next_r);
+        theory = (Button) findViewById(R.id.theory);
         result = array.getArr();
 
         if (result[0]) {
@@ -49,22 +50,30 @@ public class product_Result extends AppCompatActivity {
             }
         }
 
-            next_r.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
+        next_r.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 Intent intentProduct_Result_n = new Intent(product_Result.this, MainActivity.class);
                 startActivity(intentProduct_Result_n);
 
 
-        }
-    });
             }
+        });
+
+        theory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentProduct_Result_t = new Intent(product_Result.this, Theory.class);
+                startActivity(intentProduct_Result_t);
+            }
+        });
+    }
 
 
     @Override
     protected void onResume() {
         super.onResume();
-
+        theory.setTextSize(Settings.SETTING_SIZE);
         tv.setTextSize(Settings.SETTING_SIZE);
         next_r.setTextSize(Settings.SETTING_SIZE);
     }

@@ -39,14 +39,14 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("ShowToast")
             @Override
             public void onClick(View v) {
-            if (checkTheory) {
-                Intent intentQuest = new Intent(MainActivity.this, QuestMenu.class);
-                startActivity(intentQuest);
+                if (checkTheory) {
+                    Intent intentQuest = new Intent(MainActivity.this, QuestMenu.class);
+                    startActivity(intentQuest);
                 }
-            else {
-                Toast.makeText(MainActivity.this, "Пройдите теорию", Toast.LENGTH_LONG).show();
-                Log.d(TAG, "Toast");
-            }
+                else {
+                    Toast.makeText(MainActivity.this, "Пройдите теорию", Toast.LENGTH_LONG).show();
+                    Log.d(TAG, "Toast");
+                }
             }
         });
 

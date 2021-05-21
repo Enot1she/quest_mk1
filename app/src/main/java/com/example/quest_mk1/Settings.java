@@ -2,16 +2,8 @@ package com.example.quest_mk1;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.transition.Slide;
-import android.view.View;
-import android.widget.SeekBar;
 import android.widget.TextView;
-
 import com.google.android.material.slider.Slider;
 
 public class Settings extends AppCompatActivity {
